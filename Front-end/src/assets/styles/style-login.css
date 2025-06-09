@@ -1,7 +1,7 @@
-@import url(../../../../style/global.css);
+@import url(./global.css);
 @font-face {
     font-family: myfont ;
-    src: url("../../src/assets/fonts/PixelifySans-VariableFont_wght.ttf");
+    src: url("../fonts/PixelifySans-VariableFont_wght.ttf");
 
 }
 /* @font-face {
@@ -12,7 +12,7 @@
 body {
     width: 100%;
     min-height: 100vh; /* Garante altura mínima da tela */
-    background-image: url(../assets/img/Img-Circuito.svg);
+    background-image: url(../images/global/Circuit-background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -52,7 +52,7 @@ body {
     
 }
 .formconteiner{
-    background-image: url(../assets/img/Placa-cadastro.svg);
+    background-image: url(../images/login/Placa-cadastro.svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 435.29px;
@@ -72,7 +72,7 @@ form{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    color: white;
+    color: var(--color-neutral-white);
     align-items: center;
 
 }
@@ -83,7 +83,7 @@ form{
 .inputUser{
     background: none;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--color-neutral-white);
     outline: none;
     font-size: 15px;
     font-weight: bold;
@@ -107,7 +107,7 @@ form{
 .inputUser:valid~.labelInput{
     top: -43px;
     font-size: 15px;
-    color: #009fb7;
+    color: var(--color-primary-blue);
 }
  .custom-checkbox{
     display: flex;
@@ -121,9 +121,9 @@ form{
     width: 18px;
     height: 18px;
     border-radius: 4px;
-    background-color: #0c0c0c;
+    background-color: var(--color-background);
     display: inline-block;
-    border: 2px solid gray;
+    border: 2px solid var(--color-neutral-gray);
     vertical-align: middle;
     margin-right: 8px;
     margin-bottom: 3px;
@@ -137,8 +137,8 @@ form{
     display: inline-block;
     width: 15px;
     height: 12px; 
-    color: rgb(0, 56, 139);
-    text-shadow: 0 0 12px rgb(4, 4, 109);
+    color: var(--color-primary-blue);
+    /* text-shadow: 0 0 12px rgb(4, 4, 109); */
     
 }
 .cadastro{
@@ -159,22 +159,22 @@ form{
 }
 a{
     text-decoration: none;
-    color: #00ADEF;
+    color: var(--color-primary-blue);
     font-size: 20px;
     font-family: myinter ;
     
 }
 a:hover{
     cursor: pointer;
-    color: #00709c;
+    color: var(--color-dark-blue);
     display: inline-block;
-    text-shadow: 0 0 19px #00677b;
+    text-shadow: 0 0 19px var(--color-button-blue);
 
 }
 #submit{
 
-    border-color: #00444A;
-    background: radial-gradient(circle,rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5)) #0FA3B1;
+    border-color: var(--color-background-dark-blue);
+    background: radial-gradient(circle,rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5)) var(--color-dark-blue);
     border-radius: 5px;
     width: 100px;
     height: 50px;
@@ -189,28 +189,28 @@ a:hover{
 }
 @keyframes blink{
     0%{
-        box-shadow: 0 0 25px 1px #0FA3B1, 0 0 2px black inset ;
-        text-shadow: 0 0 10px black; 
+        box-shadow: 0 0 25px 1px var(--color-dark-blue), 0 0 2px var(--color-neutral-black) inset ;
+        text-shadow: 0 0 10px var(--color-neutral-black); 
 
     }
     25%{
-        box-shadow: 0 0 25px 1px #0fa3b17c, 0 0 2px rgba(0, 0, 0, 0.5) inset ;
+        box-shadow: 0 0 25px 1px var(--color-background-dark-blue), 0 0 2px rgba(0, 0, 0, 0.5) inset ;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 
     }
     50%{
-        box-shadow: 0 0 25px 1px #0fa3b100, 0 0 2px rgba(0, 0, 0, 0) inset ;
+        box-shadow: 0 0 25px 1px var(--color-background), 0 0 2px rgba(0, 0, 0, 0) inset ;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.0); 
     }
 
     75%{
-        box-shadow: 0 0 25px 1px #0fa3b17b, 0 0 2px rgba(0, 0, 0, 0.5) inset ;
+        box-shadow: 0 0 25px 1px var(--color-background-dark-blue), 0 0 2px rgba(0, 0, 0, 0.5) inset ;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 
     }
     100%{
-        box-shadow: 0 0 25px 1px #0FA3B1, 0 0 2px black inset ;
-        text-shadow: 0 0 10px black; 
+        box-shadow: 0 0 25px 1px var(--color-dark-blue), 0 0 2px var(--color-neutral-black) inset ;
+        text-shadow: 0 0 10px var(--color-neutral-black); 
 
     }
 }

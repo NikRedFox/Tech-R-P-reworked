@@ -42,23 +42,16 @@
         <div class="content">
             <form action="">
                 <div class="row1">
-                    <input type="text" name="name" class="name" id="name" placeholder="Nome" required>
-                    <input type="text" name="last_name" class="last_name" id="last_name" placeholder="Sobrenome"
-                        required>
+                    <input type="text" name="name" class="name" id="name" placeholder="Nome Completo" required>
+                    
                 </div>
-                <div class="row2">
-                    <input type="text" name="cpf" class="cpf" id="cpf" placeholder="CPF" maxlength="11" pattern="\d{11}"
-                        required>
+                <div class="row2">                    
                     <input type="email" name="email" class="email" id="email" placeholder="Seu e-mail"
                         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,30}$" required>
-                    <input type="tel" name="phone" class="phone" id="phone" placeholder="Telefone (opcional)"
-                        maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}">
+                    <input type="tel" name="phone" class="phone" id="phone" placeholder="Telefone"
+                        maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
                 </div>
-                <div class="row3">
-                    <input type="text" name="cnpj" class="cnpj" id="cnpj" placeholder="CNPJ (opcional)" maxlength="14"
-                        pattern="\d{14}">
-                    <input type="text" name="company" class="company" id="company" placeholder="Empresa (opcional)">
-                </div>
+               
                 <input type="text" name="subject" class="subject" id="subject" placeholder="Assunto" required>
                 <textarea name="message" class="message" id="message" placeholder="Mensagem" rows="5"
                     required></textarea>

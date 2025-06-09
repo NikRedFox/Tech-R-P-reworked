@@ -114,4 +114,32 @@ popupForm.addEventListener("submit", function(e) {
 });
 
 
+// *-----------------------*
+
+
+
+popupForm.addEventListener("submit", function(e) {
+  e.preventDefault(); // evita envio padrão do formulário
+
+  const quantidade = document.getElementById("quantidade").value.trim();
+  const tempoLoc = document.getElementById("tempo_loc").value.trim();
+
+  // Validações simples
+  if (quantidade === "" || tempoLoc === "") {
+    alert("Por favor, preencha todos os campos.");
+    return;
+  }
+
+  // Validação do número dentro dos limites (1 a 5)
+  const quantidadeNum = Number(quantidade);
+  if (isNaN(quantidadeNum) || quantidadeNum < 1 || quantidadeNum > 5) {
+    alert("Quantidade deve ser um número entre 1 e 5.");
+    return;
+  }
+
+  // Se passou nas validações, redireciona para a página de pagamento
+  window.location.href = "./pagamento.html";
+});
+
+
   
