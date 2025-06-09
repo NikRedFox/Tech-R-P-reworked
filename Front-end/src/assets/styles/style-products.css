@@ -1,0 +1,633 @@
+@import url(./global.css);
+
+body{
+    position: relative;
+    background-color: var(--color-background);
+}
+
+.background{
+    position: absolute;
+    z-index: -1;
+    top: 11.5%;
+    left: 0%;
+    width: 100%;
+    height: 88%;    
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        background-image: url('../images/global/Circuit2-off.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50% {
+        opacity: 0.5;
+        background-image: url('../images/global/Circuit2-on.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100% {
+        opacity: 1;
+        background-image: url('../images/global/Circuit2-off.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+/* Header */
+header{
+    display: flex;
+    background-color: var(--color-neutral-black);
+    justify-content: space-around;
+}
+
+header img{
+    width: 10%;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+}
+
+.header-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.header-items a{
+    text-decoration:  none;
+    color: var(--color-neutral-white);
+}
+
+.button-container a{
+    text-decoration: none;
+    color: var(--color-primary-blue);
+}
+
+.header-items li{
+    list-style: none;
+}
+
+.header-items li:nth-of-type(2){
+    width: 100px;
+}
+/* FIM DO HEADER */
+
+/* FIM DO HEADER */
+
+/*  COMEÇO DO MAIN */
+
+main{
+    background: url(../images/produtos/img-main.svg);
+    width: 100%;
+   height:1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; /* centraliza o conteúdo verticalmente */
+    z-index: 1;
+}
+.placa-maior{
+    background-image:url(../images/produtos/tela-display.svg);
+    width: 928.72px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centraliza o conteúdo verticalmente */
+    gap: 29px;
+    margin: 100px 70.98px 113.61px 442px;
+
+  
+}
+/* .placa-maior{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+} */
+.placa-maior h1{
+    width: 500px;   
+    color: var(--color-neutral-white);
+    font-size: var( --headline1-medium);
+    text-align: center;
+   
+}
+.placa-maior p{
+    font-size: var(  --paragraph-big);
+    width: 632px;
+    color: var(--color-neutral-white);
+    font-size: var( --button-medium);
+    text-align: center;
+}
+
+/* FIM DO MAIN */
+
+/*  COMEÇO DA SECTION NOSSAS VANTAGENS */
+.nossas-vantagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 196px;
+    gap: 243px;
+}
+
+.placa-nossas_vantagens{
+    background-image: url(../images/produtos/placa-menor\ \(2\).svg);
+    width: 941px;
+    height: 122px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centraliza o conteúdo verticalmente */
+    margin: 0 auto;
+    margin-top: 199px;
+
+}
+.placa-nossas_vantagens h2{
+    color: var( --color-neutral-white);
+    font-size: var(  --headline2-big);
+}
+.display-tela-vantagens{
+    background-image:url(../images/produtos/tela-display.svg);
+    width: 1315px;
+    height: 662px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* centraliza o conteúdo verticalmente */
+  
+
+}
+.display-tela-vantagens p{
+    font-size:var( --paragraph-normal);
+    color: var(--color-neutral-white);
+    width: 900px;
+    font-size: var( --headline2-medium);
+
+}
+
+/* FIM DA SECTION NOSSAS VANTAGENS */
+
+
+/* COMEÇO SECTION NOSSOS PRODUTOS */
+.nossos-produtos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 243px;
+}
+.placa-menor_nossos_produtos{
+    background-image: url(../images/produtos/placa-menor-nossos_produtos.svg);
+    width: 1094px;
+    height: 138.65px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 258px 273px 224.35px 73px;
+
+}
+.placa-menor_nossos_produtos h3{
+    color: var(--color-neutral-white);
+    font-size: var( --headline1-medium);
+    padding: 36px 0px 36px 100px;
+
+}
+/* COMEÇO DO CARROSSEL */
+
+.carrossel-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  /* BOTÕES DE NAVEGAÇÃO */
+  .carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carrossel-btn.left {
+    left: 10px;
+  }
+  
+  .carrossel-btn.right {
+    right: 10px;
+  }
+  
+  /* CONTAINER DOS CARDS */
+  .cards-container {
+    display: flex;
+    gap: 50px;
+    transition: transform 0.5s ease;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+  }
+  
+  /* SEUS ESTILOS EXISTENTES */
+  .tela-card {
+    background-image: url(../images/produtos/tela-card.svg);
+    width: 593px;
+    height: 863px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+  }
+  
+  .informacoes-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 80px 47.97px 75px;
+  }
+  
+  .informacoes-note img {
+    width: 351px;
+    height: 216px;
+    margin: 0 auto;
+  }
+  
+  .descricao {
+    color: var(--color-neutral-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    gap: 28.29px;
+    padding: 39px 25px 0px 25px;
+  }
+  
+  .descricao p {
+    font-size: var(--paragraph-normal);
+    font-weight: lighter;
+  }
+  
+  .descricao h3 {
+    font-size: var(--paragraph-big);
+  }
+  
+  .preco {
+    color: var(--color-neutral-white);
+    font-size: var(--paragraph-normal);
+    padding: 71px 0px;
+  }
+  
+  .btn-alocar {
+    background-color: var(--color-button-blue);
+    color: var(--color-neutral-white);
+    font-size: var(--button-text);
+    padding: 8px 50px;
+    border-radius: 18px;
+  }
+
+/* FIM DO CARROSSEL */
+
+
+/* COMEÇO DA ARTICLE PRODUTOS VARIÁVEIS */
+
+.cards-variaveis-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px; /* espaçamento entre colunas e linhas */
+    justify-content: center; /* centraliza o grid */
+    margin: 0 auto 80px auto; /* centraliza e adiciona margin inferior */
+    width: fit-content; /* ajusta largura ao conteúdo */
+}
+.placa-menor_produtos-variaveis{
+    background-image: url(../images/produtos/placa-menor-nossos_produtos\ \(1\).svg);
+    width: 1094px;
+    height: 138.65px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin:300px 0px 105px 600px;
+
+}
+.placa-menor_produtos-variaveis h3{
+    color: var(--color-neutral-white);
+    font-size: var( --headline1-medium);
+    padding: 41px 91px ;
+
+}
+
+.tela-produto-variavel{
+    background-image: url(../images/produtos/tela-produ-variavel.svg);
+    width: 644px;
+    height: 645px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    
+}
+.informacoes-note-variaveis{
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    
+    
+}
+.informacoes-note-variaveis:before{
+    content: '';
+    background: rgba(255, 255,255, 0.1);
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+   
+}
+.informacoes-note-variaveis img{
+    z-index: 2;
+    position: relative;
+    max-width:300px ;
+    height:188px ;
+    margin-top: 30px;
+}
+.descricao-note-variavel{
+    position: relative;
+    z-index: 2;
+    color: var(--color-neutral-white);
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.descricao-note-variavel p{
+    font-size: var(--paragraph-medium);
+    font-weight: lighter;
+}
+.descricao-note-variavel h4{
+    font-weight: 800;
+    font-size: var(--paragraph-normal);
+}
+.preco-note-variavel{
+    position: relative;
+    color: var(--color-neutral-white);
+    font-size: var(--paragraph-normal);
+    padding: 48px 80px 51px 80px;
+}
+.btn-alocar-produto{
+    position: relative;
+    background-color: var(--color-button-blue);
+    color: var(--color-neutral-white);
+    padding: 13px 45px;
+    font-size:var(  --button-small-second);
+    border-radius: 18px;
+    cursor: pointer;
+}
+/* FIM ARTICLE PRODUTOS VARIAVEIS */
+
+/*  FIM DA SECTION NOSSOS PRODUTOS */
+
+/*COMEÇO FOOTER */
+.footer-links-container{
+    color: var(--color-neutral-white);
+    background-color: var(--color-neutral-black); 
+    display:  flex;
+    height: 490px;
+    padding: 0px 22px;
+    justify-content: space-between;
+    margin-top: 140px;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo-container img{
+    width: 25%;
+}
+
+.logo-container p:nth-of-type(2){
+    width: 535px;
+}
+
+.footer-button-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-button-box input{
+    width: 342px;
+    height: 43px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+.footer-button-box button{
+    width: 89px;
+    height: 43px;
+    border-radius: 20px;
+}
+
+.footer-links-list{
+    display: flex;
+    gap: 100px;  
+    margin-top: 50px;  
+    font-size: var(--footer-links2);
+}
+
+.footer-links-list ul{
+    display:  flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 50px;
+}
+
+.footer-links-list li:nth-of-type(1){
+    font-size: var(--footer-links1);
+}
+.footer-links-list a{
+    text-decoration: none;
+    color: var(--color-neutral-white);
+}
+
+.footer-footer{
+    display: flex;
+    color: var(--color-neutral-white);
+    background-color: var(--color-neutral-black); 
+    justify-content: space-between;
+    padding: 5px 22px;
+    font-size: var(--footer-links2);
+}
+
+.tos-box{
+    display: flex;
+    gap: 23px;    
+}
+
+.tos-box a{
+    text-decoration: none;
+    color: var(--color-neutral-white);
+}
+
+/* FIM FOOTER */
+
+/* POP-UP OVERLAY */
+/* .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+   */
+
+   .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+#popupForm{
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    padding: 60px 20px 70px 20px;
+  
+
+}
+
+#popupForm p{
+  font-size: var(--paragraph-normal);
+  color: var(--color-neutral-white);
+  margin: 0 auto;
+  margin-bottom: 54px;
+}
+#popupForm label{
+  color: var(--color-neutral-black);
+  margin-bottom: 16.99px;
+
+}
+#popupForm input{
+  background: none;
+  border-bottom: 1px solid var(--color-neutral-black);
+  margin-bottom: 40px;
+  width: 100%;
+  padding: 10px 0; /* Adicione isso */
+}
+#popupForm::placeholder{
+  font-size: var(--paragraph-normal);
+  color: var(--color-neutral-gray);
+  font-weight: lighter;
+    white-space: nowrap; /* Impede quebra de linha */
+  overflow: hidden; /* Garante que nada estoure */
+}
+#popupForm button{
+  background-color: var(--color-button-blue);
+  color: var(--color-neutral-white);
+  padding: 10px 45px;
+  font-size: var(--button-medium);
+  border-radius: 18px;
+  margin: 0 auto;
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;    
+}
+
+:root{
+    --color-neutral-black: #000000;
+    --color-neutral-gray: #2F3A41;
+    --color-neutral-white: #FFFFFF;
+    --color-primary-blue: #00ADEF;
+    --color-dark-blue: #0FA3B1;
+    --color-button-blue: #006771;
+    --color-background-dark-blue: #003A41;
+    --color-background: #111110;
+    --color-background-transparency: rgba(17, 17, 16, 0.95);
+
+    --font: 'Inter';
+    --headline1-big: 64px;
+    --headline1-medium: 48px;
+    --headline1-weight: 700;
+
+    --headline2-big: 40px;
+    --headline2-medium: 33px;
+    --headline2-normal: 26px;
+
+    --paragraph-big:24px;
+    --paragraph-normal: 20px;
+    --paragraph-medium: 16px;
+    --paragraph-small: 12px;
+    --paragraph-tiny: 10px;
+
+    --button-text: 28px;
+    --button-medium:24px;
+    --button-small-second:18px;
+    --button-text-small: 15px;
+
+    --header-links: 24px;
+    --footer-links1: 16px;
+    --footer-links2: 14px;
+
+}
