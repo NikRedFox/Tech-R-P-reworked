@@ -39,7 +39,23 @@ header input{
     align-items: center;
     vertical-align: middle;
     gap: 20px;
+    color: var(--color-neutral-white);
     transform: translate(-20px, 0px);
+    
+}
+.register a{
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    background-color: var(--color-background-dark-blue);
+}
+
+.register a:hover{
+    scale: 1.05;
 }
 main{
     color: var(--color-neutral-white);
