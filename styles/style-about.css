@@ -1,0 +1,699 @@
+@import url(./global.css);
+
+body{
+    position: relative;
+    background-color: var(--color-background);
+    font-family: var(--font);
+}
+
+.background{
+    position: absolute;
+    z-index: -1;
+    top: 11.5%;
+    left: 0%;
+    width: 100%;
+    height: 80%;    
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        background-image: url('../images/global/Circuit2-off.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50% {
+        opacity: 0.5;
+        background-image: url('../images/global/Circuit2-on.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    100% {
+        opacity: 1;
+        background-image: url('../images/global/Circuit2-off.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/* HEADER */
+header{
+    display: flex;
+    background-color: var(--color-neutral-black);
+    justify-content: space-around;
+}
+
+header img{
+    width: 10%;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+}
+
+.header-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.header-items a{
+    text-decoration:  none;
+    color: var(--color-neutral-white);
+}
+
+.button-container a{
+    text-decoration: none;
+    color: var(--color-primary-blue);
+}
+/* FIM DO HEADER */
+
+/* MAIN */
+main {
+    background-image: url('../images/sobre/main-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 421px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    width: 831px;
+    height: 234px;
+    text-align: center;
+    font-size: var(--headline1-big);
+    font-weight: var(--headline1-weight);
+    color: var(--color-neutral-white);
+}
+/* FIM DO MAIN */
+
+/* SECTION INSCREVA-SE */
+.inscrevase-container {
+    background-image: url('../images/sobre/caixa-inscrevase.png');
+    width: 1332px;
+    height: 464px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 108px;
+}
+
+.inscrevase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+}
+
+.inscrevase-container h2 {
+    width: 525px;
+    height: 103px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: var(--headline2-weight);
+    color: var(--color-neutral-white);   
+}
+
+.inscrevase-container p {
+    width: 727px;
+    height: 53px;
+    text-align: center;
+    letter-spacing: 3px;
+    opacity: 69%;
+    font-size: 20px;
+    font-weight: var(--paragraph-normal);
+    color: var(--color-neutral-white);
+}
+
+.inscrevase-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.button-solucoes {
+    width: 180px;
+    height: 42px;
+    border-radius: 20px;
+    background-color: var(--color-background-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.button-solucoes:hover{
+    scale: 1.15;
+}
+
+.button-solucoes  a {
+    color: var(--color-neutral-white);
+    font-size: 15px;
+    font-weight: var(--button-text-small);
+    text-decoration: none;
+
+}
+
+.button-contato {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--color-neutral-white);
+    border-radius: 20px;
+    width: 180px;
+    height: 42px;
+    transition: .5s ease;
+}
+
+.button-contato:hover{
+    scale: 1.15;
+}
+
+.button-contato a {
+    font-size: 15px;
+    font-weight: var(--button-text-small);
+    color: var(--color-neutral-white);
+    text-decoration: none;
+}
+
+/* --------------------------------------- */
+.gif-inscrevase{
+    position: absolute;
+    top: 740px;
+    width: 1193px;    
+    height: 366px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-inscrevase .frame{
+    position: absolute;
+    top: 4px;
+    left: -0.5%;
+    width: 1200px;    
+    height: 370px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-inscrevase .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+    
+/* FIM DA SECTION INSCREVA-SE */
+
+/* SECTION POR QUE */
+.porque-container {
+    background-image: url('../images/sobre/caixa-porque.png');
+    width: 1126px;
+    height: 562px;
+    margin-top: 103px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    justify-self: center; 
+    position: relative;
+}
+
+.porque-content {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px;
+}
+
+.line {
+    width: 318px;
+    height: 1px;
+    background-color: var(--color-neutral-white);
+}
+
+.porque-container h2 {
+    font-size: 48px;
+    font-weight: 200;
+    color: var(--color-neutral-white);
+}
+
+.text p {
+    width: 900px;
+    height: 54px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-neutral-white);
+}
+
+.motivos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 82px;
+}
+
+.motivo {
+    width: 177px;
+    height: 177px;
+    background-color: var(--color-background-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    
+}
+
+.motivo img {
+    width: 63px;
+    height: 63px;
+}
+
+.motivo p {
+    width: 135px;
+    height: 40px;
+    font-size: 16px;
+    display: flex;
+    text-align: center; 
+    color: var(--color-neutral-white);  
+}
+
+/* --------------------------------------- */
+.gif-porque{
+    position: absolute;
+    bottom: 500px;
+    width: 1002px; 
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-porque .frame{
+    position: absolute;
+    left: -0.5%;
+    width: 1010px;    
+    height: 444px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-porque .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+/* FIM DA SECTION POR QUE */
+
+/* SECTION NOSSOS VALORES */
+.valores-container {
+    background-image: url('../images/sobre/caixa-valores.png');
+    width: 1126px;
+    height: 562px;
+    margin-top: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    justify-self: center;
+    position: relative; 
+}
+
+.valores-content {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.valores-container h2 {
+    font-size: 48px;
+    font-weight: 200;
+    color: var(--color-neutral-white);
+}
+
+.valores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 96px;
+}
+
+.valor {
+    width: 177px;
+    height: 177px;
+    background-color: var(--color-background-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 29px;
+}
+
+.valor p {
+    width: 150px;
+    font-size: 15px;
+    text-align: center;
+    color: var(--color-neutral-white);
+}
+
+/* --------------------------------------- */
+.gif-valores{
+    position: absolute;
+    top: 60px;
+    width: 1004px;    
+    height: 440x;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-valores .frame{
+    position: absolute;
+    left: -0.5%;
+    width: 1010px;    
+    height: 450px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-valores .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+/* FIM DA SECTION NOSSOS VALORES */
+
+/* SECTION NOSSO COMPROMISSO */
+.compromisso-container {
+    margin-top: 162px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.compromisso-image {
+    background-image: url('../images/sobre/caixa-compromisso-image.png');
+    width: 544px;
+    height: 627px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.compromisso-image img {
+    /* width: 435px;
+    height: 532px; */
+    width: 450px;    
+    height: 550px;
+}
+
+/* --------------------------------------- */
+.gif-compromisso-img{
+    position: absolute;
+    top: 60px;
+    width: 415px;    
+    height: 532px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-compromisso-img .frame{
+    position: absolute;
+    width: 415px;    
+    height: 532px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-compromisso-img .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* --------------------------------------- */
+.compromisso-caixa {
+    background-image: url('../images/sobre/caixa-compromisso.png');
+    width: 624px;
+    height: 627px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    gap: 43px;
+    position: relative;
+}
+
+.compromisso-caixa h2 {
+    width: 420px;
+    height: 160px;
+    font-size: 48px;
+    font-weight: var(--headline2-weight);
+    color: var(--color-neutral-white); 
+}
+
+.compromisso-caixa p {
+    width: 433px;
+    height: 116px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--color-neutral-white); 
+}
+
+/* --------------------------------------- */
+.gif-compromisso-caixa{
+    position: absolute;
+    top: 48px;
+    width: 484px;
+    height: 536px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-compromisso-caixa .frame{
+    position: absolute;
+    width: 484px;
+    height: 536px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-compromisso-caixa .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* FIM DA SECTION NOSSO COMPROMISSO */
+
+/* SECTION ENTRE EM CONTATO */
+.contato-container {
+    margin-top: 282px;
+    background-image: url('../images/sobre/caixa-entre-contato.svg');
+    width: 1439px;
+    height: 193px;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contato-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 76px;
+}
+
+.contato-container p {
+    width: 819px;
+    height: 81px;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--color-neutral-white);
+}
+
+.contato-container .button {
+    width: 265px;
+    height: 47px;
+    border-radius: 20px;
+    background-color: var(--color-background-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.contato-container .button:hover{
+    scale: 1.15;
+}
+
+.contato-container a {
+    font-size: var(--button-text-small);
+    color: var(--color-neutral-white);
+    text-decoration: none;
+}
+
+/* --------------------------------------- */
+.gif-contato{
+    position: absolute;
+    top: 18px;
+    width: 1315px;
+    height: 159px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.gif-contato .frame{
+    position: absolute;
+    width: 1312px;
+    height: 159px;
+    object-fit: cover;
+    animation: flicker 0.2s steps(1) infinite;
+}
+
+.gif-contato .f2{
+    animation-delay: 0.1s;  
+}
+
+@keyframes flicker {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* FIM DA SECTION ENTRE EM CONTATO */
+
+/* FOOTER */
+
+.footer-links-container{
+    color: var(--color-neutral-white);
+    background-color: var(--color-neutral-black); 
+    display:  flex;
+    height: 490px;
+    padding: 0px 22px;
+    justify-content: space-between;
+    margin-top: 140px;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo-container img{
+    width: 25%;
+}
+
+.logo-container p:nth-of-type(2){
+    width: 535px;
+}
+
+.footer-button-box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-button-box input{
+    width: 342px;
+    height: 43px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+.footer-button-box button{
+    width: 89px;
+    height: 43px;
+    border-radius: 20px;
+}
+
+.footer-links-list{
+    display: flex;
+    gap: 100px;  
+    margin-top: 50px;  
+    font-size: var(--footer-links2);
+}
+
+.footer-links-list ul{
+    display:  flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 50px;
+}
+
+.footer-links-list li:nth-of-type(1){
+    font-size: var(--footer-links1);
+}
+.footer-links-list a{
+    text-decoration: none;
+    color: var(--color-neutral-white);
+}
+
+.footer-footer{
+    display: flex;
+    color: var(--color-neutral-white);
+    background-color: var(--color-neutral-black); 
+    justify-content: space-between;
+    padding: 5px 22px;
+    font-size: var(--footer-links2);
+}
+
+.tos-box{
+    display: flex;
+    gap: 23px;    
+}
+
+.tos-box a{
+    text-decoration: none;
+    color: var(--color-neutral-white);
+}
+
+/* FIM DO FOOTER */
+
+
+
+
+
