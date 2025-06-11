@@ -1,9 +1,10 @@
 @import url(./global.css);
 
-body{
+ body{
     background: url(../images/global/Circuit-background.svg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center -300px;
     width: 100%;
     font-family: "Inter";
 }
@@ -78,16 +79,16 @@ body h3{
     font-size: 15px;
 
 }
-.redirect{
+form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
-    left: 50%;
-    gap: 5px;
+    align-items: center;
+    gap: 30px;
 
 }
 .box{
-    width: 40%;
+    width: 800px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -127,9 +128,9 @@ input{
     font-size: 20px;
     font-weight: 100;
 }
-#button{
+.submit{
 
-    width: 34%;
+    width: 679px;
     padding: 14px;
     background: radial-gradient(circle,rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5)) var(--color-dark-blue);
     border-radius: 5px;
@@ -140,7 +141,8 @@ input{
 
 
 
-}#button:hover{
+}
+.submit:hover{
     animation: blink 2s steps(5) infinite;
 }
 @keyframes blink{
@@ -169,4 +171,4 @@ input{
         text-shadow: 0 0 10px black; 
 
     }
-}
+} 

@@ -12,11 +12,6 @@ body{
     color: var(--color-neutral-white);
 }
 
-main{
-    display: flex;
-    justify-content: center;
-}
-
 .background{
     position: absolute;
     z-index: -1;
@@ -208,7 +203,7 @@ main .column1-main{
     flex-direction: column;
     background-image: url('../images/perfil/Display3.png');
     width: 448px;
-    height: 550px;
+    height: 479px;
     gap: 20px;
 }
 
@@ -236,11 +231,6 @@ main .column1-main{
 .security .infos .content .address, .email, .phone{
     display: flex;
     align-items: center;
-    gap: 20px;
-}
-
-.cpf{
-    display: flex;
     gap: 20px;
 }
 
@@ -288,7 +278,7 @@ main .column1-main{
 .gif-security{
     position: absolute;
     width: 408px;
-    height: 445px;
+    height: 396.14px;
     z-index: 1000;
     pointer-events: none;
 }
@@ -298,7 +288,7 @@ main .column1-main{
     top: 11%;
     left: 5%;
     width: 408px;
-    height: 445px;
+    height: 396.14px;
     object-fit: cover;
     animation: flicker 0.2s steps(1) infinite;
 }
@@ -480,8 +470,6 @@ main .column2-main{
 .item3-reviews .title{
     font-size: var(--button-text);
     font-weight: bold;
-    display: flex;
-    padding-left: 60px;
 }
 
 .item3-reviews .reviews{

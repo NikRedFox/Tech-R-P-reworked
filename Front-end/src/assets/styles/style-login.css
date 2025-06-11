@@ -171,7 +171,7 @@ a:hover{
     text-shadow: 0 0 19px var(--color-button-blue);
 
 }
-#submit{
+.submit{
 
     border-color: var(--color-background-dark-blue);
     background: radial-gradient(circle,rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.5)) var(--color-dark-blue);
@@ -184,7 +184,7 @@ a:hover{
     transition: all .5s ease;
  
 }
-#submit:hover{
+.submit:hover{
     animation: blink 2s steps(5) infinite;
 }
 @keyframes blink{
