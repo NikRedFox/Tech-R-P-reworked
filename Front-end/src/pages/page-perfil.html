@@ -7,6 +7,7 @@
     <title>Tech R&P - Perfil</title>
     <link rel="icon" href="../assets/images/global/Logo-TechRP-2.svg" type="icon">
     <link rel="stylesheet" href="../assets/styles/style-perfil.css">
+    <script src="../assets/js/perfil.js"defer></script>
 </head>
 
 <body>
@@ -49,10 +50,10 @@
                     <div class="user">
                         <img src="../assets/images/perfil/Foto-Perfil.png" alt="User">
                         <div class="user-name">
-                            <p>Gustavo Almeida</p>
+                            <p>Nome:<span id="nome">--</span></p>
                         </div>
-                        <div class="position">
-                            <p>Locatário</p>
+                        <div class="position" id="data_nasc">
+                            <p>Data Nascimento:<span id="data_nasc">--</span></p>  
                         </div>
                     </div>
                     <div class="infos">
@@ -79,17 +80,21 @@
                             <p>Informações Confirmadas</p>
                         </div>
                         <div class="content">
+                            <div class="cpf">
+                                <img src="../assets/images/perfil/user-check.png" alt="User Check">
+                                <p>CPF:<span id="cpf">--</span></p>
+                            </div>
                             <div class="address">
                                 <img src="../assets/images/perfil/user-check.png" alt="User Check">
-                                <p>Endereço</p>
+                                <p>Endereço:<span id="endereco">--</span></p>
                             </div>
                             <div class="email">
                                 <img src="../assets/images/perfil/user-x.png" alt="User X">
-                                <p>E-mail</p>
+                                <p>Email:<span id="email">--</span></p>
                             </div>
                             <div class="phone">
                                 <img src="../assets/images/perfil/user-check.png" alt="User Check">
-                                <p>Celular</p>
+                                <p>Celular:<span id="telefone">--</span></p>
                             </div>
                         </div>
                     </div>
