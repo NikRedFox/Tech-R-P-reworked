@@ -21,10 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
             email.innerText = data.email
             endereco.innerText = data.endereco
             telefone.innerText = data.telefone
-
-            
-
-
         })
 
         .catch((err) => {

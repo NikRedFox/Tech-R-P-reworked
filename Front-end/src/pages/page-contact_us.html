@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech R&P - Fale Conosco</title>
     <link rel="icon" href="../assets/images/global/Logo-TechRP-2.svg" type="icon">
-    <script src="../assets/js/faleconosco.js" defer></script>
     <link rel="stylesheet" href="../assets/styles/style-contact_us.css">
+    <script src="../assets/js/faleconosco.js" defer></script>
 </head>
 
 <body>
@@ -43,22 +43,21 @@
         <div class="content">
             <form id="form-fale-conosco">
                 <div class="row1">
-                    <input type="text" name="name" class="name" id="name" placeholder="Nome Completo" required>
+                    <input type="text" name="name" class="name" id="nome-completo" placeholder="Nome Completo" required>
                     
                 </div>
                 <div class="row2">                    
                     <input type="email" name="email" class="email" id="email" placeholder="Seu e-mail"
                         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,30}$" required>
                     <input type="tel" name="phone" class="phone" id="telefone" placeholder="Telefone"
-                        maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+                        maxlength="15" pattern="[0-9]{11}" required>
                 </div>
                
                 <input type="text" name="subject" class="subject" id="assunto" placeholder="Assunto" required>
                 <textarea name="message" class="message" id="mensagem" placeholder="Mensagem" rows="5"
                     required></textarea>
                 <div class="button-container">
-                    <input type="button" name="button" class="button" id="button" value="Enviar Mensagem"
-                        onclick="alert('Mensagem enviada com sucesso!')">
+                    <input type="submit" name="button" class="button" id="button" value="Enviar Mensagem">
                 </div>
             </form>
         </div>
