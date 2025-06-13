@@ -201,6 +201,7 @@ main{
     flex-direction: column;
     margin-top: 243px;
 }
+
 .placa-menor_nossos_produtos{
     background-image: url(../images/produtos/placa-menor-nossos_produtos.svg);
     width: 1094px;
@@ -229,7 +230,7 @@ main{
     overflow: hidden;
     width: 100%;
     max-width: 100vw;
-  }
+}
   
   /* BOTÕES DE NAVEGAÇÃO */
   .carrossel-btn {
@@ -243,25 +244,36 @@ main{
     padding: 10px;
     cursor: pointer;
     z-index: 10;
-  }
+}
   
   .carrossel-btn.left {
     left: 10px;
-  }
+}
   
   .carrossel-btn.right {
     right: 10px;
-  }
+}
   
   /* CONTAINER DOS CARDS */
-  .cards-container {
-    display: flex;
-    gap: 50px;
-    transition: transform 0.5s ease;
-    scroll-behavior: smooth;
-    overflow-x: auto;
-  }
+.cards-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+  scroll-snap-type: x mandatory;
+}
   
+  .cards-container {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+
+.cards-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
   /* SEUS ESTILOS EXISTENTES */
   .tela-card {
     background-image: url(../images/produtos/tela-card.svg);
@@ -272,22 +284,24 @@ main{
     background-position: center;
     position: relative;
     display: flex;
+    flex: 0 0 auto;
     flex-direction: column;
     border-radius: 20px;
-  }
+    scroll-snap-align: start;
+}
   
   .informacoes-note {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 75px 80px 47.97px 75px;
-  }
+}
   
   .informacoes-note img {
     width: 351px;
     height: 216px;
     margin: 0 auto;
-  }
+}
   
   .descricao {
     color: var(--color-neutral-white);
@@ -297,22 +311,22 @@ main{
     align-self: flex-start;
     gap: 28.29px;
     padding: 39px 25px 0px 25px;
-  }
+}
   
   .descricao p {
     font-size: var(--paragraph-normal);
     font-weight: lighter;
-  }
+}
   
   .descricao h3 {
     font-size: var(--paragraph-big);
-  }
+}
   
   .preco {
     color: var(--color-neutral-white);
     font-size: var(--paragraph-normal);
     padding: 71px 0px;
-  }
+}
   
   .btn-alocar {
     background-color: var(--color-button-blue);
@@ -320,7 +334,7 @@ main{
     font-size: var(--button-text);
     padding: 8px 50px;
     border-radius: 18px;
-  }
+}
 
 /* FIM DO CARROSSEL */
 

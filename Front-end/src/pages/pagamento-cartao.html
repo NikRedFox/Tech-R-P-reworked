@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/global/Logo-TechRP-2.svg" type="icon">
+    <script src="../assets/js/modal-pagamento.js" defer></script>
 </head>
 <body>
     <header>
@@ -83,7 +84,7 @@
                 <p>Total Geral: </p> 
                 <p></p>  
             </div>
-            <button>Efetuar Pagamento</button>
+            <button id="botao-pagamento">Efetuar Pagamento</button>
         </form>
            
         
@@ -138,5 +139,17 @@
         </div>
 
     </footer>
+
+    <!-- Modal-pagamento -->
+
+    <div id="modal-pagamento" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Pagamento realizado com sucesso!</h2>
+            <p>Obrigado pela preferência.</p>
+            <button id="confirmar-ok">OK</button>
+        </div>
+    </div>
+
 </body>
 </html>
