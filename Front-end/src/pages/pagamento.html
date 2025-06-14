@@ -1,177 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/styles/style-pagamento.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/style-pagamento.css" />
+    <script src="../assets/js/pagamentos.js" defer></script>
+    <script src="../assets/js/validacao-pagamento.js" defer></script>
     <title>Tech R&P - Pagamento</title>
-    <link rel="icon" href="../assets/images/global/Logo-TechRP-2.svg" type="icon">
-</head>
-<body>
+    <link
+      rel="icon"
+      href="../assets/images/global/Logo-TechRP-2.svg"
+      type="icon"
+    />
+  </head>
+  <body>
     <!-- header -->
     <header>
-        <img src="../assets/images/global/Logo-TechRP.svg" alt="Logo-Tech-R&P">
-    
-        <div class="header-container">
-            <nav class="header-links">
-                <ul class="header-items">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="./about.html">Quem somos</a></li>
-                    <li><a href="./products.html">Produtos</a></li>
-                    <li><a href="./descarte-responsavel.html">Descarte</a></li>
-                </ul>
-            </nav>
+      <img src="../assets/images/global/Logo-TechRP.svg" alt="Logo-Tech-R&P" />
 
-            <nav class="button-container">
-                <a href="./page-contact_us.html">Contato</a>                
-                <img src="../assets/images/global/Whats-logo.svg" alt="Whats-icon" title="Whats-icon">                
-            </nav>
+      <div class="header-container">
+        <nav class="header-links">
+          <ul class="header-items">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./about.html">Quem somos</a></li>
+            <li><a href="./products.html">Produtos</a></li>
+            <li><a href="./descarte-responsavel.html">Descarte</a></li>
+          </ul>
+        </nav>
 
-            <nav class="button-container">
-                <a href="./login.html">Login</a>                
-                <img src="../assets/images/global/login-icon.png" alt="Login-icon" title="Login-icon">                
-            </nav>
-        </div>
+        <nav class="button-container">
+          <a href="./page-contact_us.html">Contato</a>
+          <img
+            src="../assets/images/global/Whats-logo.svg"
+            alt="Whats-icon"
+            title="Whats-icon"
+          />
+        </nav>
+
+        <nav class="button-container">
+          <a href="./login.html">Login</a>
+          <img
+            src="../assets/images/global/login-icon.png"
+            alt="Login-icon"
+            title="Login-icon"
+          />
+        </nav>
+      </div>
     </header>
     <!-- fim do header -->
 
     <!-- main -->
     <main>
-        <div class="user">
-            <img src="../assets/images/pagamento/loc-icon.png" alt="">
-            <h1>Nome Completo do Usuário</h1>
-        </div>
+      <!-- endereco-box -->
+        <section class="section enredeco-box">
+            <div class="user">
+                <img src="../assets/images/pagamento/loc-icon.png" alt="" />
+                <h1>Nome Completo do Usuário</h1>
+            </div>
 
-        <div class="loc-info">
-            <h2>Nome da Rua, Número</h2>
-            <h2>Bairro Cidade Estado País CEP do Usuário</h2>
+            <div class="loc-info">
+                <h2>Nome da Rua, Número</h2>
+                <h2>Bairro Cidade Estado País CEP do Usuário</h2>
+            </div>
+        </section>
+        <!-- fim endereco-box -->
+
+        <!-- metodo-envio -->
+        <section class="section metodo-envio">
+        <div class="content">
+            <h2>Método de Envio</h2>
+            <div class="taxa-info">
+                <div class="title">
+                    <img src="../assets/images/pagamento/icon-check.png" alt="" />
+                    <p>Taxa Mínima de Envio</p>
+                </div>
+                <div class="info">
+                    <p class="valor">R$ 0,00</p>
+                    <p class="entrega">Chega entre Quinta-Feira, Mai. 15 - Quarta-Feira, Mai. 21</p>
+                </div>
+            </div>
         </div>
+        </section>
+        <!-- fim da section metodo-envio -->
+
+        <!-- metodo-pagamento -->
+        <section class="section metodo-pagamento">
+            <div class="content">
+                <h2>Método de Pagamento</h2>
+                <form>
+                <input type="radio" name="metodo" value="pix" id="pix" />
+                <label for="pix">
+                    <img
+                    class="pix-icon"
+                    src="../assets/images/pagamento/icon-pix.png"
+                    alt=""
+                    />
+                    Pix
+                </label>
+
+                <input type="radio" name="metodo" value="credito" id="credito" />
+                <label for="credito">
+                    <img
+                    class="credit-icon"
+                    src="../assets/images/pagamento/icon-creditcard.png"
+                    alt=""
+                    />
+                    Cartão de Crédito
+                </label>
+
+                <input type="radio" name="metodo" value="debito" id="debito" />
+                <label for="debito">
+                    <img
+                    class="debit-icon"
+                    src="../assets/images/pagamento/icon-debitcard.png"
+                    alt=""
+                    />
+                    Cartão de Débito
+                </label>
+                </form>
+            </div>
+        </section>
+        <!-- fim da section metodo-pagamento -->
+
+        <!-- valor-total -->
+        <section class="section valor-total">
+        <div class="content">
+            <div class="valor-total-item subtotal">
+            <p>Subtotal:</p>
+            <p>R$ 100,000</p>
+            </div>
+            <div class="valor-total-item taxa-envio">
+            <p>Taxa de Envio:</p>
+            <p>R$ 20,00</p>
+            </div>
+            <div class="valor-total-item desconto">
+            <p>Desconto:</p>
+            <p>R$ 0,00</p>
+            </div>
+            <div class="total-geral">
+            <p>Total Geral:</p>
+            <p>R$ 120,00</p>
+            </div>
+            <button id="btn-continuar">Continuar</button>
+        </div>
+        </section>
+        <!-- fim da section valor total -->
 
     </main>
     <!-- fim do main -->
 
-    <!-- metodo-envio -->
-   <section class="section metodo-envio">
-    <div class="content">
-      <h2>Método de Envio</h2>
-      <div class="taxa-info">
-        <div class="title">
-          <img src="../assets/images/pagamento/icon-check.png" alt="">
-          <p>Taxa Mínima de Envio</p>
+   
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-links-container">
+        <div class="logo-container">
+          <img src="../assets/images/global/Logo-TechRP.svg" alt="" />
+          <p>Se inscreva em nosso site para obter novas nóticias</p>
+          <div class="footer-button-box">
+            <input type="text" placeholder="Seu e-mail" />
+            <button>Enviar</button>
+          </div>
+          <p>
+            Se inscrevendo, você concorda com nossa Política de Privacidade e
+            concorda em receber atualizações.
+          </p>
         </div>
-        <div class="info">
-          <p class="valor">R$ 0,00</p>
-          <p class="entrega">Chega entre Quinta-Feira, Mai. 15 - Quarta-Feira, Mai. 21 </p>
+
+        <div class="footer-links-list">
+          <ul>
+            <li>Links Rápidos</li>
+            <li><a href="">Nossos Produtos</a></li>
+            <li><a href="">Sobre nós</a></li>
+            <li><a href="">Contato</a></li>
+            <li><a href="">Planos de Fidelidade</a></li>
+          </ul>
+
+          <ul>
+            <li>Mídias Sociais</li>
+            <li>
+              <img src="../assets/images/global/Face-logo.svg" alt="" /><a
+                href=""
+              >
+                Facebook</a
+              >
+            </li>
+            <li>
+              <img src="../assets/images/global/Insta-logo.svg" alt="" /><a
+                href=""
+              >
+                Instagram</a
+              >
+            </li>
+            <li>
+              <img src="../assets/images/global/Twitter-logo.svg" alt="" /><a
+                href=""
+              >
+                Twitter</a
+              >
+            </li>
+            <li>
+              <img src="../assets/images/global/Linkedin-logo.svg" alt="" /><a
+                href=""
+              >
+                Linkedln</a
+              >
+            </li>
+          </ul>
+
+          <ul>
+            <li>Informações Adicionais</li>
+            <li>Endereço: Rua Oscar ,900</li>
+            <li>Email: techrp.suporte@gmail.com</li>
+            <li>Suporte: 11(5555-000)</li>
+          </ul>
         </div>
       </div>
-    </div>
-   </section>
-   <!-- fim da section metodo-envio -->
 
-   <!-- metodo-pagamento -->
-   <section class="section metodo-pagamento">
-    <div class="content">
-      <h2>Método de Pagamento</h2>
-      <form>
-        <input type="radio" name="metodo" value="pix" id="pix">
-        <label for="pix">
-          <img class="pix-icon" src="../assets/images/pagamento/icon-pix.png" alt="">
-          Pix
-        </label>
-          
-        <input type="radio" name="metodo" value="credito" id="credito">
-        <label for="credito">
-          <img class="credit-icon" src="../assets/images/pagamento/icon-creditcard.png" alt="">
-          Cartão de Crédito
-        </label>
-          
-        <input type="radio" name="metodo" value="debito" id="debito">
-        <label for="debito">
-          <img class="debit-icon" src="../assets/images/pagamento/icon-debitcard.png" alt="">         
-          Cartão de Débito
-        </label>
-      </form>
-    </div>
-  </section>
-   <!-- fim da section metodo-pagamento -->
-
-   <!-- valor-total -->
-    <section class="section valor-total">
-        <div class="content">
-            <div class="valor-total-item subtotal">
-                <p>Subtotal:</p>
-                <p>R$ 100,000</p>
-            </div>
-            <div class="valor-total-item taxa-envio">
-                <p>Taxa de Envio:</p>
-                <p>R$ 20,00</p>
-            </div>
-            <div class="valor-total-item desconto">
-                <p>Desconto:</p>
-                <p>R$ 0,00</p>
-            </div>
-            <div class="total-geral">
-                <p>Total Geral:</p>
-                <p>R$ 120,00</p>
-            </div>
-            <button>Continuar</button>
-
+      <div class="footer-footer">
+        <p>© 2025 Tech R&P. All rights reserved.</p>
+        <div class="tos-box">
+          <a href="">Privacy Policy</a>
+          <a href="">Terms of Service</a>
+          <a href="">Cookie Settings</a>
         </div>
-
-    </section>
-    <!-- fim da section valor total -->
-
-     <!-- footer -->
-     <footer>
-        <div class="footer-links-container">
-            <div class="logo-container">
-                <img src="../assets/images/global/Logo-TechRP.svg" alt="">
-                <p>Se inscreva em nosso site para obter novas nóticias</p>
-                <div class="footer-button-box">
-                    <input type="text" placeholder="Seu e-mail">
-                    <button>Enviar</button>
-                </div>
-                <p>Se inscrevendo, você concorda com nossa Política de Privacidade e concorda em receber atualizações.</p>
-            </div>
-
-            <div class="footer-links-list">
-                <ul>
-                    <li>Links Rápidos</li>
-                    <li><a href="">Nossos Produtos</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                    <li><a href="">Contato</a></li>
-                    <li><a href="">Planos de Fidelidade</a></li>
-                </ul>
-
-                <ul>
-                    <li>Mídias Sociais</li>
-                    <li><img src="../assets/images/global/Face-logo.svg" alt=""><a href=""> Facebook</a></li>
-                    <li><img src="../assets/images/global/Insta-logo.svg" alt=""><a href=""> Instagram</a></li>
-                    <li><img src="../assets/images/global/Twitter-logo.svg" alt=""><a href=""> Twitter</a></li>
-                    <li><img src="../assets/images/global/Linkedin-logo.svg" alt=""><a href=""> Linkedln</a></li>
-                </ul>
-
-                <ul>
-                    <li>Informações Adicionais</li>
-                    <li>Endereço: Rua Oscar ,900</li>
-                    <li>Email: techrp.suporte@gmail.com</li>
-                    <li>Suporte: 11(5555-000)</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-footer">
-            <p>© 2025 Tech R&P. All rights reserved.</p>
-            <div class="tos-box">
-                <a href="">Privacy Policy</a>
-                <a href="">Terms of Service</a>
-                <a href="">Cookie Settings</a>
-            </div>
-        </div>
+      </div>
     </footer>
 
     <!-- fim do footer -->
 
-    
-</body>
+
+    <!-- Modal pagamentos -->
+        <div id="modal-overlay" class="modal-overlay hidden"></div>
+        <form id="form-cartao-credito" class="form-cartao hidden">
+            <button type="button" class="btn-fechar">Fechar</button>
+            <h3>Dados do Cartão de Crédito</h3>
+            <div class="input-cartao">
+                <label for="numeroCartao">Número do cartão</label>
+                <div class="input-container">
+                    <input id="numeroCartao" type="text" name="numeroCartao" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" minlength="13" required>
+                    <img src="../assets/images/pagamento-cartao/creditcard-icon.svg" alt="">
+                </div>
+            </div>
+
+            <div class="nome-cartao">
+                <label for="titularCartao">Titular do cartão</label>
+                <input id="titularCartao" type="text" placeholder="Titular do cartão" required>
+            </div>
+            
+            <div class="input-validade">
+                <label for="validade">Data de validade</label>
+                <div class="data-box">
+                    <input id="validadeMes" type="number" name="validadeMes" placeholder="Mês"  min="1" max="12" maxlength="2" required>
+                    <input id="validadeAno" type="number" name="validadeAno" placeholder="Ano" min="24" max="99" maxlength="2" required>
+                </div>
+            </div>
+            
+            <div class="input-seguranca">
+                <label for="codigoSeguranca">Código de segurança</label>
+                <input id="codigoSeguranca" type="text" name="codigoSeguranca" placeholder="CVV/CVC/CID" maxlength="4" required>            
+            </div>
+            <div class="mensagem-sucesso">
+                Pagamento realizado com sucesso!
+            </div>
+            <button type="submit" id="botao-pagamento">Confirmar pagamento</button>
+
+            <a class="btn-home" href="../../index.html">Pagina principal</a>
+        </form>
+
+        <form id="form-cartao-debito" class="form-cartao hidden">
+            <button type="button" class="btn-fechar">Fechar</button>
+            <h3>Dados do Cartão de Débito</h3>
+            <div class="input-cartao">
+                <label for="numeroCartao">Número do cartão</label>
+                <div class="input-container">
+                    <input id="numeroCartao" type="text" name="numeroCartao" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" minlength="13" required>
+                    <img src="../assets/images/pagamento-cartao/creditcard-icon.svg" alt="">
+                </div>
+            </div>
+
+            <div class="nome-cartao">
+                <label for="titularCartao">Titular do cartão</label>
+                <input id="titularCartao" type="text" placeholder="Titular do cartão" required>
+            </div>
+            
+            <div class="input-validade">
+                <label for="validade">Data de validade</label>
+                <div class="data-box">
+                    <input id="validadeMes" type="number" name="validadeMes" placeholder="Mês"  min="1" max="12" maxlength="2" required>
+                    <input id="validadeAno" type="number" name="validadeAno" placeholder="Ano" min="24" max="99" maxlength="2" required>
+                </div>
+            </div>
+            
+            <div class="input-seguranca">
+                <label for="codigoSeguranca">Código de segurança</label>
+                <input id="codigoSeguranca" type="text" name="codigoSeguranca" placeholder="CVV/CVC/CID" maxlength="4" required>            
+            </div>
+            <div class="mensagem-sucesso">
+                Pagamento realizado com sucesso!
+            </div>
+            <button type="submit" id="botao-pagamento">Confirmar pagamento</button>
+            <a class="btn-home" href="../../index.html">Pagina principal</a>
+            
+        </form>
+
+        <button class="btn-fechar">Fechar</button>
+        <div id="pix-info" class="form-cartao hidden">
+            <button type="button" class="btn-fechar">Fechar</button>
+            <h3>Pagamento via Pix</h3>
+            <div class="preco-box-pix">
+                <h1>R$: 120,00</h1>
+                <p>Por favor, conclua o pagamento dentro de 10 minutos.</p>
+            </div>
+            <p>Escaneie o QR Code para finalizar a compra:</p>
+            <div class="pix-img">
+                <img src="../assets/images/pagamento/qr-code.svg" alt="QR Code Pix" width="200">
+            </div>
+            <a class="btn-home" href="../../index.html">Pagina principal</a>
+        </div>
+    <!-- Fim Modal -->
+  </body>
 </html>
