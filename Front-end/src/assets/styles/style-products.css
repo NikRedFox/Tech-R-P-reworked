@@ -448,6 +448,10 @@ main{
     border-radius: 18px;
     cursor: pointer;
 }
+
+.btn-alocar-produto:hover{
+    scale: 1.05;
+}
 /* FIM ARTICLE PRODUTOS VARIAVEIS */
 
 /*  FIM DA SECTION NOSSOS PRODUTOS */
