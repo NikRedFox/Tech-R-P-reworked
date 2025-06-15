@@ -229,19 +229,16 @@ const alocarButtons = document.querySelectorAll(".btn-alocar-produto");
 
 alocarButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const card =
-      btn.closest(".informacoes-note-variaveis") ||
-      btn.closest(".informacoes-note");
+    const card = btn.closest(".informacoes-note, .informacoes-note-variaveis");
 
     const imageSrc = card.querySelector("img").getAttribute("src");
-    const titleEl = card.querySelector("h3, h4");
-    const title = titleEl ? titleEl.textContent : "Produto";
-    const priceEl = card.querySelector(".preco-note-variavel, .preco");
-    const price = priceEl ? priceEl.textContent : "Preço não informado";
+    const title = card.querySelector("h3, h4").textContent;
+    const priceElement = card.querySelector(".preco, .preco-note-variavel");
+    const price = priceElement ? priceElement.textContent : "Preço não disponível";
 
     popupImage.src = imageSrc;
     popupTitle.textContent = title;
-    popupPrice.textContent = Preço: ${price};
+    popupPrice.textContent = price;
 
     popupOverlay.style.display = "flex";
   });
@@ -257,13 +254,15 @@ popupOverlay.addEventListener("click", (e) => {
   }
 });
 
-popupForm.addEventListener("submit", function (e) {
+popupForm.addEventListener("submit", function(e) {
   e.preventDefault();
 
   const quantidade = document.getElementById("quantidade").value.trim();
-  const tempoLoc = document.getElementById("tempo_loc").value.trim();
+  const dataInicio = document.getElementById("data_inicio").value;
+  const dataFim = document.getElementById("data_fim").value;
 
-  if (quantidade === "" || tempoLoc === "") {
+  // Validação
+  if (quantidade === "" || dataInicio === "" || dataFim === "") {
     alert("Por favor, preencha todos os campos.");
     return;
   }
@@ -274,6 +273,8 @@ popupForm.addEventListener("submit", function (e) {
     return;
   }
 
-  console.log("Alocado:", quantidade, tempoLoc);
+  console.log("Alocado:", quantidadeNum, dataInicio, dataFim);
+
+  // Redireciona
   window.location.href = "./pagamento.html";
 });
