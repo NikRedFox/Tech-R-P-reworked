@@ -146,6 +146,8 @@
 
   // === CONTROLE DO CARROSSEL DE PRODUTOS ===
 
+
+
 const container = document.querySelector('.cards-container');
 const btnLeft = document.querySelector('.carrossel-btn.left');
 const btnRight = document.querySelector('.carrossel-btn.right');
@@ -229,8 +231,19 @@ const alocarButtons = document.querySelectorAll(".btn-alocar-produto");
 
 alocarButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const card = btn.closest(".informacoes-note, .informacoes-note-variaveis");
+    const card = btn.closest(".informacoes-note")|| btn.closest(".informacoes-note-variaveis");
 
+    if (!card) {
+      alert("Erro ao identificar o produto.");
+      return;
+    }
+
+    // const produtoId = card.dataset.produtoId;
+    const produtoId =btn.id.replace("btn-alocar-", "");
+
+    const usuarioId = localStorage.getItem("usuarioId");
+
+    const produto = card.getElementsByClassName("idproduto").value
     const imageSrc = card.querySelector("img").getAttribute("src");
     const title = card.querySelector("h3, h4").textContent;
     const priceElement = card.querySelector(".preco, .preco-note-variavel");
@@ -239,6 +252,8 @@ alocarButtons.forEach((btn) => {
     popupImage.src = imageSrc;
     popupTitle.textContent = title;
     popupPrice.textContent = price;
+
+    popupForm.setAttribute("data-produto-id", produtoId);
 
     popupOverlay.style.display = "flex";
   });
@@ -258,8 +273,12 @@ popupForm.addEventListener("submit", function(e) {
   e.preventDefault();
 
   const quantidade = document.getElementById("quantidade").value.trim();
-  const dataInicio = document.getElementById("data_inicio").value;
-  const dataFim = document.getElementById("data_fim").value;
+  const dataInicio = document.getElementById("data_inicio").value.trim();
+  const dataFim = document.getElementById("data_fim").value.trim();
+  const produtoId = popupForm.getAttribute("data-produto-id");
+  const usuarioId = localStorage.getItem("usuarioId");
+
+
 
   // Validação
   if (quantidade === "" || dataInicio === "" || dataFim === "") {
@@ -273,8 +292,38 @@ popupForm.addEventListener("submit", function(e) {
     return;
   }
 
-  console.log("Alocado:", quantidadeNum, dataInicio, dataFim);
+  console.log (quantidadeNum, dataInicio, dataFim,produtoId,usuarioId);
 
-  // Redireciona
-  window.location.href = "./pagamento.html";
+  // // Redireciona
+  // window.location.href = "./pagamento.html";
+
+  fetch("https://techrpsearch-hpccewfuaxfph6dc.eastus-01.azurewebsites.net/api/locacoes", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      dataInicio: dataInicio,
+      dataFim: dataFim,
+      produtoId: produtoId,
+      clientesId: usuarioId,
+      quantidade: quantidadeNum
+    })
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Erro ao enviar dados.");
+    }
+    return response.json();  // Só agora transformamos em JSON
+  })
+  .then(data => {
+    console.log("Valor total: ", data.valorTotal);
+    console.log("Sucesso:", data);
+    // Redireciona ou exibe mensagem de sucesso
+    window.location.href = "./pagamento.html";
+  })
+  .catch(error => {
+    console.error("Erro detalhado:", error);
+    alert("Houve um problema ao enviar os dados. Tente novamente.");
+});
 });
