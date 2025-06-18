@@ -320,6 +320,7 @@ popupForm.addEventListener("submit", function(e) {
     console.log("Valor total: ", data.valorTotal);
     console.log("Sucesso:", data);
     // Redireciona ou exibe mensagem de sucesso
+    localStorage.setItem("locacaoId", data.locacaoId);
     window.location.href = "./pagamento.html";
   })
   .catch(error => {
