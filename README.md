@@ -42,7 +42,7 @@ Esse é um site que desenvolvi em grupo a partir de um template no Figma, també
 <!-- EXEMPLO DE LAYOUT: -->
 ## 🎨 Layout
 
-![Web1]()
+![Web1](https://github.com/NikRedFox/Tech-R-P-reworked/blob/main/Front-end/src/assets/images/global/TechRP-bg.png)
 
 ---
 
